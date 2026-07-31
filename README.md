@@ -8,7 +8,7 @@
 
 &emsp;The Linux command line is a text interface, and called shell, terminal, console, prompt... The shell, also known as (aka) a Command Line Interpreter (CLI), is a text-only interface between the user and the kernel. Its main function is to read the commands that are typed in the terminal window by the user and execute them. Just a keyboard and screen, with no power to run programs locally. There was no mouse, no fancy graphics, not even any choice of colour. Everything was sent as text, and received as text.
 
-| The thing | The  | What is | 
+| The thing | The acronym | What is | 
 |:-----------:|:--------------:|:--------------------------------------:|
 | UNIX | | |
 | Linux | ***L***inux ***i***s ***n***ot ***U***ni***x*** | | 
@@ -19,7 +19,7 @@
 
 &emsp;The programs can be drived by to external programs that can be installed on the computer, however UNIX (or UNIX-like) operating systems come with many built-in command-line interface programs and shell utilities:
 
-- **Shell** : `sh `,`csh `,`tcsh `,`bash`;
+- **Shell** : `sh `,`csh `,`tcsh `,`bash`, `zsh;
 - **File system** : `cat`,`cd`,`chmod`,`chown`,`chgrp`,`cksum`,`cmp`,`cp`,`dd`,`du`,`df`,`file`,`fsck`,`fuser`,`ln`,`ls`,`lsattr`,`lsof`,`mkdir`,`mount`,`mv`,`pax`,`pwd`,`rm`,`rmdir`,`size`,`split`,`tee`,`touch`,`type`,`umask`;
 - **Processes** : `at`,`bg`,`chroot`,`cron`,`fg`,`kill`,`killall`,`nice`,`pgrep`,`pidof`,`pkill`,`ps`,`pstree`,`time`,`top`;
 - **User environment** : `clear`,`env`,`exit`,`finger`,`history`,`id`,`logname`,`mesg`,`passwd`,`su`,`sudo`,`uptime`,`talk`,`tput`,`uname`,`w`,`wall`,`who`,`whoami`,`write`;
