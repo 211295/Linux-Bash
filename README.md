@@ -8,6 +8,28 @@
 
 &emsp;The Linux command line is a text interface, and called shell, terminal, console, prompt... The shell, also known as (aka) a Command Line Interpreter (CLI), is a text-only interface between the user and the kernel. Its main function is to read the commands that are typed in the terminal window by the user and execute them. Just a keyboard and screen, with no power to run programs locally. There was no mouse, no fancy graphics, not even any choice of colour. Everything was sent as text, and received as text.
 
+> Sempre que você está digitando instruções para o computador (ao contrário de apenas digitar algum texto, como estou fazendo agora nesta caixa de comentários), você está usando uma interface de linha de comando (CLI). Se você está fazendo isso em uma janela dedicada à CLI exibida em uma Interface Gráfica do Usuário (GUI), então essa janela é chamada de terminal. Se os comandos que você está executando são como você interage com o sistema operacional (ao contrário de algum aplicativo que tem sua própria CLI, o que não são muitos hoje em dia), então o programa que está interpretando seus comandos e executando-os é chamado de shell. Pode ser bash, que é o nome de um programa shell específico, ou pode ser um diferente.
+
+> A maioria das CLIs tem uma string especial como C:\> ou $ ou % que te diz que está pronta para você digitar seu próximo comando; tal string é chamada de prompt em geral e de prompt de comando em particular. O nome "prompt de comando" passou a ser usado para todo o conceito de CLIs e pode também se referir especificamente ao terminal ou ao shell. (Uma pequena parte de uma coisa passando a se referir à coisa inteira é um tipo comum de mudança linguística chamada sinédoque.)
+
+> Isso é basicamente. O resto são detalhes. Uma visão geral histórica segue.
+
+> As CLIs costumavam ser o único tipo de "interface de usuário" (UI) que os computadores tinham. Os mais antigos nem usavam telas; cada linha de saída era impressa em papel físico que rolava atrás do seu teclado. Como os computadores que você conversava dessa maneira eram grandes monstros que ocupavam um cômodo inteiro, você não se sentava na frente deles - você se sentava em um teclado/impressora remotos em outro cômodo que estava conectado ao computador com fios. Essas estações eram chamadas de "terminais", e geralmente eram coletadas em salas dedicadas a "clusters de terminais" dispostas como salas de aula.
+
+> As interfaces de linha de comando incluem um "prompt", que é um sinal de que o computador terminou de te fornecer texto e está pronto para você digitar outro comando. Como é uma interface de linha de comando, seu prompt é mais especificamente chamado de "prompt de comando".
+
+> Os PCs costumavam iniciar em uma CLI que ocupava todo o monitor; uma vez que o Windows surgiu, você tinha que fazer um esforço para abrir uma janela onde pudesse fazer coisas de CLI. Isso fez com que as pessoas usassem frases como "abrir um prompt de comando" para se referir ao processo de lançar tal janela. E a própria janelinha se tornou o novo significado de "terminal".
+
+> Quando você está digitando em uma CLI, você está falando com algum programa cuja função é interpretar seus comandos e executá-los - broadamente, tais programas são chamados de "interpretes". Mas há todo tipo de aplicativos que podem usar interpretes de linguagem; aquele que funciona como o interprete de comando de um sistema operacional é chamado de "shell". Isso é baseado na metáfora de uma cebola (ou ogro): é a camada mais externa, aquela que você pode ver e interagir, envolvida em torno das camadas internas: comandos que são chamados, as bibliotecas que esses comandos usam e o sistema operacional por baixo de tudo. O shell original nos PCs era chamado COMMAND.COM, então "prompt de comando" pode ser interpretado como "prompt COMMAND" em alguns contextos; isso foi encurtado para CMD.EXE no Windows moderno. Mas o Windows moderno também tem um shell completamente diferente (e muito melhor) chamado PowerShell - que também está disponível para outros sistemas operacionais, incluindo UNIXes.
+
+> Houve um monte de shells no UNIX. O original era chamado apenas de "o shell"; seguindo o mesmo padrão de duas letras que outros comandos UNIX como ls para "listar" e mv para "mover", o programa executável no disco foi nomeado sh. Mas aquele shell original não era uma linguagem de programação - você não conseguia escrever scripts que tomassem decisões em tempo de execução, apenas no máximo coletar uma lista de comandos para executar em sequência. Então as pessoas escreveram alternativas. Como parte da Berkeley Software Distribution (BSD), Bill Joy fez o C shell (csh), que é nomeado após a linguagem de programação C mas não se parece muito com ela; é mais sobre como foi projetado para ser uma linguagem de programação como C, tornando a linha de comando scriptável. Ken Greer adicionou a conclusão de nome de arquivo, emprestada do sistema TENEX, para criar o "TENEX C Shell" (tcsh).
+
+> A versão 7 do UNIX foi lançada com um novo shell, ainda chamado sh, que foi escrito por Stephen Bourne e portanto conhecido como "o shell Bourne" - ele adicionou muitos recursos de programabilidade. David Korn estendeu o shell Bourne para criar seu Korn shell (ksh), incorporando alguns recursos do csh mas usando uma sintaxe compatível com Bourne. (E talvez recursos do tcsh, também; o tcsh foi o primeiro a apresentar a conclusão de nome de arquivo, mas não está claro qual deles ou ksh foi o primeiro a incluir edição interativa de linha de comando e navegação de histórico também. Mas está claro que o empréstimo foi em ambas as direções e alguns recursos do ksh acabaram indo para o tcsh.) Algumas das mudanças do Korn shell foram emprestadas de volta para versões posteriores do "sh vanilla", e quando o padrão POSIX para shells foi criado, essas versões mais recentes foram a base para isso. Assim, esses recursos do ksh se tornaram requisitos para que um shell pudesse afirmar que era compatível com o POSIX.
+
+> O problema é que UNIX e sh e ksh eram programas proprietários, de código fechado, propriedade da AT&T (empresa-mãe da Bell Labs). Portanto, não estavam disponíveis para serem usados no sistema operacional semelhante ao UNIX de código aberto da Free Software Foundation. E o status do código-fonte do BSD ainda estava para ser adjudicado, então csh e tcsh também não estavam disponíveis. Brian Fox, portanto, se dedicou a criar um novo shell do zero que fosse projetado para se parecer e funcionar muito como o ksh. Ele o chamou de Bourne-Again Shell (bash) - um trocadilho com o nome de Bourne e a frase "nascido de novo". Quando o Linux surgiu e forneceu o núcleo do OS de código aberto que a FSF precisava, o bash tornou-se seu shell padrão. Assim, muitas pessoas, acostumadas ao Linux, ou que estiveram por perto desde que o bash era o shell padrão no macOS, tratam "o shell" e "bash" como sinônimos.
+
+> Por volta da mesma época em que o bash estava sendo desenvolvido, um proprietário de Amiga chamado Paul Falstad ficou desiludido com as capacidades limitadas do shell padrão daquele computador e decidiu escrever um novo - e como Fox, ele baseou seu shell principalmente no ksh. Ele o chamou de Z shell (zsh) e foi depois portado para todos os UNIXes, incluindo macOS e Linux. A Apple, que devido a desavenças com a licença da FSF não atualiza sua versão do Bash desde 2007, tornou o Zsh o shell padrão no macOS em 2019.
+
 | The thing | The acronym | What is | 
 |:-----------:|:--------------:|:--------------------------------------:|
 | UNIX | | |
@@ -19,16 +41,16 @@
 
 &emsp;The programs can be drived by to external programs that can be installed on the computer, however UNIX (or UNIX-like) operating systems come with many built-in command-line interface programs and shell utilities:
 
-- **Shell** : `sh `,`csh `,`tcsh `,`bash`, `zsh;
-- **File system** : `cat`,`cd`,`chmod`,`chown`,`chgrp`,`cksum`,`cmp`,`cp`,`dd`,`du`,`df`,`file`,`fsck`,`fuser`,`ln`,`ls`,`lsattr`,`lsof`,`mkdir`,`mount`,`mv`,`pax`,`pwd`,`rm`,`rmdir`,`size`,`split`,`tee`,`touch`,`type`,`umask`;
-- **Processes** : `at`,`bg`,`chroot`,`cron`,`fg`,`kill`,`killall`,`nice`,`pgrep`,`pidof`,`pkill`,`ps`,`pstree`,`time`,`top`;
-- **User environment** : `clear`,`env`,`exit`,`finger`,`history`,`id`,`logname`,`mesg`,`passwd`,`su`,`sudo`,`uptime`,`talk`,`tput`,`uname`,`w`,`wall`,`who`,`whoami`,`write`;
-- **Text processing** : `awk`,`banner`,`basename`,`comm`,`csplit`,`cut`,`dirname`,`ed`,`ex`,`fmt`,`head`,`iconv`,`join`,`less`,`more`,`paste`,`sed`,`sort`,`spell`,`strings`,`tail`,`tr`,`uniq`,`vi`,`wc`,`xargs`;
-- **Shell builtins** : `alias`,`echo`,`expr`,`printf`,`sleep`,`test`,`true`,`and`,`false`,`unset`,`wait`,`yes`;
-- **Networking** : `dig`,`host`,`ifconfig`,`inetd`,`netcat`,`netstat`,`nslookup`,`ping`,`rdate`,`rlogin`,`ssh`,`traceroute`;
-- **Searching** : `find`,`grep`,`locate`,`whatis`,`whereis`;
-- **Documentation** : `apropos`,`help`,`man`;
-- **Miscellaneous** : `bc`,`dc`,`cal`,`date`,`lp`,`lpr`.
+- **Shell** : `sh `,`csh `,`tcsh `,`bash`, `zsh`;
+- **File system** : `cat` , `cd` , `chmod` , `chown` , `chgrp` , `cksum` , `cmp` , `cp` , `dd` , `du` , `df` , `file` , `fsck` , `fuser` ,` ln` , `ls` ,` lsattr` , `lsof` , `mkdir` , `mount` , `mv` , `pax` , `pwd` , `rm` , `rmdir` , `size` , `split` , `tee` , `touch` , `type` , `umask`;
+- **Processes** : `at`, `bg`, `chroot`, `cron`, `fg`, `kill`, `killall`, `nice`, `pgrep`, `pidof`, `pkill`, `ps`, `pstree`, `time`, `top`;
+- **User environment** : `clear`, `env`, `exit`, `finger`, `history`, `id`, `logname`, `mesg`, `passwd`, `su`, `sudo`, `uptime`, `talk`, `tput`, `uname`, `w`, `wall`, `who`, `whoami`, `write`;
+- **Text processing** : `awk`, `banner`, `basename`, `comm`, `csplit`, `cut`, `dirname`, `ed`, `ex`, `fmt`, `head`, `iconv`, `join`, `less`, `more`, `paste`, `sed`, `sort`, `spell`, `strings`, `tail`, `tr`, `uniq`, `vi`, `wc`, `xargs`;
+- **Shell builtins** : `alias`, `echo`, `expr`, `printf`, `sleep`, `test`, `true`, `and`, `false`, `unset`, `wait`, `yes`;
+- **Networking** : `dig`, `host`, `ifconfig`, `inetd`, `netcat`, `netstat`, `nslookup`, `ping`, `rdate`, `rlogin`, `ssh`, `traceroute`;
+- **Searching** : `find`, `grep`, `locate`, `whatis`, `whereis`;
+- **Documentation** : `apropos`, `help`, `man`;
+- **Miscellaneous** : `bc`, `dc`, `cal`, `date`, `lp`, `lpr`.
 
 &emsp;Hardware initialization when The BIOS (Basic Input/Output System) execute (the firts code of software). In other words 'puts in an available state' every piece of hardware, such as the network card, the hard disk, the graphic card, the optical drive, the keyboard, the mouse, etc.
 
