@@ -135,12 +135,12 @@ The prompt display tree things in the screen: the name of computer/server
 
 ## Files
 &emsp;Under UNIX, file extensions are arbitrary and do not have a particular meaning (Windows have tree letter extensions). So convencionaly in Linux have some cods to reference a kind of files
-- `*script*.sh` = shell scripts, text files containing a series of shell commands
-- `*script*.pl` = perl scripts, text files containing PERL commands
-- `*script*.py` = python scripts, text files containing PYTHON commands (use command **python3** before those files)
-- `*table*.csv` = text files with Comma-Separated Values, generally used in tables
-- `*file*.txt` = text files with no particular format
-- `*file*.fasta` = text files containing sequences in FASTA format
+- `script.sh` = shell scripts, text files containing a series of shell commands
+- `script.pl` = perl scripts, text files containing PERL commands
+- `script.py` = python scripts, text files containing PYTHON commands (use command **python3** before those files)
+- `table.csv` = text files with Comma-Separated Values, generally used in tables
+- `file.txt` = text files with no particular format
+- `file.fasta` = text files containing sequences in FASTA format
 
 # Standar Streams-> Redirection Input/Output
 
