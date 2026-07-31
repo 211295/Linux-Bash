@@ -11,11 +11,11 @@
 | The thing | The  | What is | 
 |:-----------:|:--------------:|:--------------------------------------:|
 | UNIX | | |
-| Linux | **L**inux **i**s **n**ot **U**ni**x** | | 
+| Linux | ***L***inux ***i***s ***n***ot ***U***ni***x*** | | 
 | POSIX | | |
 | Shell | | |
-| Bash | **B**ourne **A**gain **Sh**ell | |
-| CLI  | **C**ommand **L**ine **I**nference | |
+| Bash | ***B***ourne ***A***gain ***Sh***ell | |
+| CLI  | ***C***ommand ***L***ine ***I***nference | |
 
 &emsp;The programs can be drived by to external programs that can be installed on the computer, however UNIX (or UNIX-like) operating systems come with many built-in command-line interface programs and shell utilities:
 
